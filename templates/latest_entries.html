@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latest Entries</title>
+    <link rel="stylesheet" href="{% static 'latest_entries.css' %}">
+    <script src="https://kit.fontawesome.com/ffeb9fda3e.js" crossorigin="anonymous"></script>
+    <script src="{% static ".js" %}" defer></script>
+</head>
+
+<body>
+    <button id="create">Make a Post!</button>
+    <ul id="list">
+        {% for entry in entries %}
+        <li id="box">
+            <div id="content">
+                {{ entry.content }}
+            </div>
+            <div id="likes">
+                <i class="far fa-thumbs-up"></i> {{ entry.likes }}
+            </div>
+        </li>
+
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
