@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'create_entry.css`' %}">
+    <link rel="stylesheet" href="{% static 'create_entry.css' %}">
 </head>
 <body>
     <form action="{% url 'create_entry' %}" method="post">
         <label for="content">
             {% csrf_token %}
-            <input autofocus type="text" name="content" size="25" placeholder="Make A Post! :D" id="create_input">
+            <input autofocus required type="text" name="content" placeholder="Make A Post! :D" id="create-input">
         </label>
     </form>
 </body>

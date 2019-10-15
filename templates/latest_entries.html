@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <button id="create">Make a Post!</button>
+    <a href="{% url 'create_entry' %}">
+        <button id="create">Make! <br /> !Post!</button>
+    </a>
     <ul id="list">
         {% for entry in entries %}
         <li id="box">
