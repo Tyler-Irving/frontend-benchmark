@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Latest Entries</title>
+    <title>Document</title>
     <link rel="stylesheet" href="{% static 'entries.css' %}">
     <script src="https://kit.fontawesome.com/ffeb9fda3e.js" crossorigin="anonymous"></script>
     <script src="{% static "like.js" %}" defer></script>
@@ -14,12 +14,12 @@
 
 <body>
     <div>
-    <a href="{% url 'create_entry' %}">
-        <button id="create">Make! <br /> !Post!</button>
-    </a>
-    <a href="{% url 'top_entries' %}">
-        <button id="trending">Trending <br /> (Top)</button>
-    </a>
+        <a href="{% url 'create_entry' %}">
+            <button id="create">Make! <br /> !Post!</button>
+        </a>
+        <a href="{% url 'latest_entries' %}">
+            <button id="home-page">Home<br />Page</button>
+        </a>
     </div>
     <ul id="list">
         {% for entry in entries %}
@@ -36,7 +36,6 @@
         </li>
 
         {% endfor %}
-    </ul>
 </body>
 
 </html>
