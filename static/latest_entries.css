@@ -51,5 +51,14 @@ body {
 
 #likes {
     font-size: 15pt;
-    padding: 30px;
+    padding: 30px 45px 30px 30px;
+}
+
+#like-butt {
+    width: 1em;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 10pt;
 }
