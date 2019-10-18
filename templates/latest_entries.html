@@ -15,10 +15,13 @@
 <body>
     <div>
         <a href="{% url 'create_entry' %}">
-            <button id="create">Make! <br /> !Post!</button>
+            <button id="create" class="button">Post</button>
         </a>
         <a href="{% url 'top_entries' %}">
-            <button id="trending">Trending <br /> (Top)</button>
+            <button id="trending" class="button">Top</button>
+        </a>
+        <a href="{% url 'admin:index' %}">
+            <button id="admin" class="button">Admin</button>
         </a>
     </div>
     <ul id="list">
