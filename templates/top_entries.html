@@ -27,6 +27,9 @@
     <ul id="list">
         {% for entry in entries %}
         <li id="box">
+            <div id="id">
+                {{ entry.id }}
+            </div>
             <div id="content">
                 {{ entry.content }}
             </div>
@@ -39,6 +42,9 @@
         </li>
 
         {% endfor %}
+    </ul>
 </body>
+
+</html>
 
 </html>
