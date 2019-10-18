@@ -1,15 +1,16 @@
-const likeButtons = document.querySelectorAll("#likes")
-const item = document.querySelectorAll("#box")
+const list = document.querySelector("#list")
+const items = list.querySelectorAll("#box")
 
-for (const button of likeButtons) {
-    const plus = button.querySelector("#like-butt");
-    plus.addEventListener('click', () => {
-        const url = "/entries/entry.likes/like"
-        fetch(url)
+for (const item of items) {
+    const id = item.querySelector("#id");
+    const plus = item.querySelector("#like-butt")
+    const number = plus.querySelector("#count")
+    plus.addEventListener("click", () => {
+        const url = `/entries/${id.textContent.trim()}/like`
+        fetch(url, { method: 'post' })
             .then(response => response.json())
-            .then(data => {
-                const number = data.querySelector("#count")
-                number.textContent = Number(number.textContent) + 1;
+            .then((response) => {
+                number.textContent = response.likes;
             })
     })
 }

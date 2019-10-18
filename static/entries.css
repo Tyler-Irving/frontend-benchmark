@@ -59,6 +59,10 @@ body {
     border:4px solid black;
 }
 
+#id {
+    display: none;
+}
+
 #content {
     font-size: 20pt;
     width: 20rem;

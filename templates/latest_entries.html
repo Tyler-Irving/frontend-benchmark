@@ -14,16 +14,19 @@
 
 <body>
     <div>
-    <a href="{% url 'create_entry' %}">
-        <button id="create">Make! <br /> !Post!</button>
-    </a>
-    <a href="{% url 'top_entries' %}">
-        <button id="trending">Trending <br /> (Top)</button>
-    </a>
+        <a href="{% url 'create_entry' %}">
+            <button id="create">Make! <br /> !Post!</button>
+        </a>
+        <a href="{% url 'top_entries' %}">
+            <button id="trending">Trending <br /> (Top)</button>
+        </a>
     </div>
     <ul id="list">
         {% for entry in entries %}
         <li id="box">
+            <div id="id">
+                {{ entry.id }}
+            </div>
             <div id="content">
                 {{ entry.content }}
             </div>
